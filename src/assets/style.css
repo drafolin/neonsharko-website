@@ -1,0 +1,29 @@
+@import 'tailwindcss';
+
+@layer base {
+  main {
+    padding-top: calc(var(--spacing) * 20);
+    min-height: 100vh;
+  }
+}
+
+@layer components {
+  .hero {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: calc(var(--spacing) * 30);
+    padding-bottom: calc(var(--spacing) * 30);
+  }
+
+  .hero :not(p) {
+    text-align: center;
+  }
+
+  .card {
+    background:
+      top left/40% url('img/card-top-border.svg') no-repeat,
+      bottom right/60% url('img/card-bottom-border.svg') no-repeat;
+  }
+}
